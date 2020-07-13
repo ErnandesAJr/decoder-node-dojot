@@ -1,3 +1,16 @@
+# About
+
+Given the problem of [**Task 4**](https://github.com/dojot/dojot-training), step 2.
+
+A company produces a device with pollutants and oxygenation level. It will install several of these devices along a river near a factory to check the water treatment. **Due to the simplicity of device, it sends the data corresponding to the two measurements in a 16-bit message, each reading being encoded in 8 bits**. Data is sent every hour to a gateway that relays them to dojot via HTTP.
+
+## Problem: 
+
+Given the limitation of the devices, it will be necessary to convert from 16 bits to 8 bits, separating the messages.
+
+That way, we can use Dojot's [Flow Broker](https://github.com/dojot/flowbroker) to perform this task whenever new data arrives. **However, that knot does not yet exist!**
+For the task, you will need to create a new node that will do this conversion.
+
 # How to build and add it to Dojot
 
 Build the docker image:
