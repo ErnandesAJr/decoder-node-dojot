@@ -58,7 +58,11 @@ class DataHandler extends dojot.DataHandlerBase {
      */
     handleMessage(config, message) {
         try {
-            //TODO: Implementation
+            let data = this._get(config.in, message);
+            let mask = 0xFF;
+
+            this._set(config.out, { "pollutants": data >> 8, "oxygen": data & mask }, message);
+
             return Promise.resolve([message]);
         } catch (error) {
             return Promise.reject(error);
