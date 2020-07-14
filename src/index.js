@@ -59,6 +59,9 @@ class DataHandler extends dojot.DataHandlerBase {
     handleMessage(config, message) {
         try {
             //TODO: Implementation
+            let input = this._get(config.in, message);
+            let output = ''
+            this._set(config.out, output, message);
             return Promise.resolve([message]);
         } catch (error) {
             return Promise.reject(error);
